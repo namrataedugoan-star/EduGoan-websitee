@@ -2,23 +2,72 @@
 .navbar {
   box-shadow: 0 4px 7px rgba(0,0,0,0.1);
 }
+
+/* Logo */
 .logo-img {
-  height: 70px; /* Adjust logo size */
+  height: 60px;
+  width: auto;
 }
 
+/* Brand text container */
+.brand-text {
+  margin-left: 10px; /* instead of gap or negative margin */
+}
+
+/* EduGoan text */
 .navbar .brand-text h5 {
-  font-size: 30px;
+  font-size: 26px;
   color: #ff9900;
+  font-weight: 600;
 }
 
+/* School of Technology */
 .navbar .brand-text small {
-  background-color: #f7941d; /* same orange color */
-      color: #000;
-      font-weight: 400;
-      padding: 3px 1px;
-      border-radius: 6px;
-      font-size: 14px;
+  display: inline-block;   /* VERY IMPORTANT */
+  background-color: #f7941d;
+  color: #000;
+  font-weight: 400;
+  padding: 2px 4px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-top: 4px;
 }
+.brand-scroll-section {
+  background-color: #ff9900;   /* background */
+  padding: 35px 0;
+}
+
+.brand-scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.brand-scroll-track {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: max-content;
+  animation: brandScroll 14s linear infinite; /* fast & smooth */
+}
+
+.brand-logo {
+  height: 60px;
+  width: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* CONTINUOUS SCROLL – NO BREAK */
+@keyframes brandScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
 
 .navbar-nav .nav-link {
   font-size: 0.95rem;
@@ -115,29 +164,47 @@ h5{
   height: auto;
   margin-top: -6px;
 }
-.bg-orange {
-  background-color: #ff9900 !important;
-  margin-top: -50px;
+.brand-scroll-section {
+  background-color: #ff9900;
+  padding: 30px 0;
 }
-.alumni-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #ffffff;
+
+.alumni-text {
+  font-weight: 600;
+  color: #000;
+  margin: 0;
 }
-.alumni-divider {
-  width: 3px;
-  height: 6px;
-  background-color: #ffffff;
+
+.brand-scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
 }
-.alumni-logos img {
-  max-height: 55px;
+
+.brand-scroll-track {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  width: max-content;
+  animation: brandScroll 14s linear infinite;
+}
+
+.brand-logo {
+  height: 65px;
   width: auto;
+  flex-shrink: 0;
   object-fit: contain;
-  transition: transform 0.3s ease;
 }
-.alumni-logos img:hover {
-  transform: scale(1.05);
+
+/* PERFECT INFINITE SCROLL */
+@keyframes brandScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
 }
+
 /* hero section */
 body {
     font-family: Arial, sans-serif;
@@ -250,7 +317,7 @@ body {
 .logo-img {
   height: 50px;
   width: auto;
-  margin: 0 40px;         
+  margin: 0 5px;         
   object-fit: contain;
   flex-shrink: 0;
   filter: none !important;
@@ -265,24 +332,32 @@ body {
   transform: none !important;
 }
 
-.scroll-left {
-  animation: moveLeft 22s linear infinite;
-}
-
-.scroll-right {
-  animation: moveRight 22s linear infinite;
-}
-
-
 @keyframes moveLeft {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1200px);
+  }
 }
 
 @keyframes moveRight {
-  0%   { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
+  from {
+    transform: translateX(-1200px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
+
+.scroll-left {
+  animation: moveLeft 18s linear infinite;
+}
+
+.scroll-right {
+  animation: moveRight 18s linear infinite;
+}
+
 /* why sould edugoan join topic css */
 
 html, body {
@@ -428,6 +503,7 @@ html, body {
     border-color: #0A66C2;
     font-size: 0.8rem;
     padding: 2px 6px !important;
+    width: 84px;
     display: inline-flex;
     align-items: center;
     gap: 4px;
@@ -500,5 +576,88 @@ html, body {
     }
   }
 }
+/* scholarship css */
+body{
+    background:#f7f7f7;
+  }
 
+  /* ---------- SCHOLARSHIP CARDS ---------- */
+  .icon-box{
+    background:#e6e6e6;
+    border-radius:8px;
+  }
+
+  .scholar-card{
+    max-width:300px;     /* width kam */
+    width:100%;
+  }
+
+  .icon-circle{
+    width:52px;
+    height:52px;
+    background:#ff9900;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    margin:auto;
+  }
+
+  /* ---------- CONTACT BUTTON ---------- */
+  .contact-btn{
+    background:#ff9900;
+    color:#000;
+    border:none;
+    font-weight:600;
+    padding:8px 22px;
+  }
+
+  .contact-btn:hover{
+    background:#e68a00;
+  }
+
+  /* ---------- FORM BOX ---------- */
+  .form-box{
+  background:linear-gradient(180deg,#ffe98a,#ff9900);
+  border-radius:18px;
+  max-width:520px;        /* 👈 SLIM WIDTH */
+  padding:28px 26px;     /* 👈 kam padding */
+}
+
+.slim-input{
+  padding:10px 14px;     /* 👈 slim input */
+  border-radius:8px;
+  font-size:15px;
+}
+
+.footer {
+      
+      color: #fff;
+      padding: 40px 20px;
+      margin-top: -181px;
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .footer h5 {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    .social-icons a {
+      font-size: 20px;
+      margin-right: 10px;
+      color: #fff;
+    }
+    .footer .row {
+      align-items: stretch; /* sab column equal height */
+    }
+    .footer-logo img {
+      max-width: 120px;
+      height: auto;
+    }
 
